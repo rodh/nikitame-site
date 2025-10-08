@@ -1,0 +1,6 @@
+# robots.txt for https://nikita.me
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nikita.me/sitemap.xml
