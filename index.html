@@ -181,6 +181,49 @@
       .icon-btn:hover { background:#1a1a1d; }
       .stack li::before { color: var(--muted); }
     }
+
+    /* Testimonials */
+    .testimonials { background: #ffffff; padding: clamp(40px, 6vw, 80px) 0; }
+    .testimonials .section-head { margin-bottom: clamp(20px, 3vw, 36px); }
+    .testimonials .eyebrow { font-weight: 800; font-size: clamp(36px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 0; }
+    .testimonials .kicker { margin: 6px 0 22px; font-weight: 800; letter-spacing: .06em; text-transform: lowercase; font-size: clamp(14px, 1.6vw, 18px); }
+
+    .quotes { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(16px, 2vw, 28px) clamp(16px, 2vw, 28px); }
+    @media (max-width: 1100px){ .quotes { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 720px){ .quotes { grid-template-columns: 1fr; } }
+
+    .quote { background: #f6f6f6; border-radius: var(--radius-lg); padding: clamp(16px, 2.2vw, 24px); box-shadow: var(--shadow-sm); }
+    .quote p { margin: 0; text-align: left; font-weight: 600; color: #182230; }
+
+    .sig { margin-top: 20px; }
+    .sig .name { font-weight: 800; }
+    .sig .title { color: var(--muted); }
+    .sig .rel { color: var(--muted); font-style: italic; }
+
+    .quote {
+  position: relative;
+
+  
+}
+
+  .quote p,
+  .quote .sig {
+    position: relative;
+    z-index: 10;
+    padding-left: 30px;
+  }
+
+.quote:before {
+      content: "\201C";
+      position: absolute;
+      top: -5px;
+      left: 10px;
+      z-index: 0;
+      color: #111;
+      font-family: 'Sanchez', serif;
+      font-size: 4em;
+      font-weight: 600;
+   }
   </style>
 </head>
 <body>
@@ -225,7 +268,42 @@
       <figure class="photo" aria-label="Portrait">
         <img src="headshot-2.webp" alt="Black and white portrait of a person wearing a parka with a fur hood" />
       </figure>
+      
     </header>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" aria-label="Testimonials">
+      <div class="section-head">
+        <h2 class="eyebrow">Kind words</h2>
+        <div class="eyebrow">From kind people<span style="color: #E11D48">.</span></div>
+      </div>
+
+      <div class="quotes" role="list">
+        <article class="quote" role="listitem">
+          <p>She was always the first to offer help, share thoughtful insights, and approach every opportunity with intelligence and heart.</p>
+          <div class="sig">
+            <div class="name"><a href="https://www.linkedin.com/in/alyssa-mcclellan-beatty-97aaa8a0/" target="_blank">Alyssa McClellan-Beatty</a></div>
+            <div class="title">Digital Product Manager at EMPLOYERS Insurance</div>
+          </div>
+        </article>
+
+        <article class="quote" role="listitem">
+          <p>She has a rare ability to bring structure without losing the human touch — helping our team stay organized, communicate clearly, and actually enjoy the process.</p>
+          <div class="sig">
+            <div class="name">Daisy S. Deloera</div>
+            <div class="title">Administrative Specialist</div>
+          </div>
+        </article>
+
+        <article class="quote" role="listitem">
+          <p>Working with Nikita has had a profound impact on my development as a leader. Through her guidance, I was able to grow my perspectives and skills while challenging me to hold myself to a higher standard and lead with empathy.</p>
+          <div class="sig">
+            <div class="name"><a href="https://www.linkedin.com/in/jon-ray-alcabasa-339496277/" target="_blank">Jon Ray Alcabasa</a></div>
+            <div class="title">Underwriting Services Manager at EMPLOYERS Insurance</div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 </body>
 </html>
